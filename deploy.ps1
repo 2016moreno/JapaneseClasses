@@ -1,4 +1,4 @@
-# GitHub Pages Manual Deploy Script (SAFE VERSION)
+# GitHub Pages Manual Deploy Script (FIXED FOR SECURITY)
 Write-Host "Starting deployment..."
 
 # 1. Build the project
@@ -24,9 +24,10 @@ if ($currentBranch -eq "main") {
     exit 1
 }
 
-# 3. Clean the directory
-Write-Host "Step 3: Cleaning old files on $currentBranch..."
-Get-ChildItem -Exclude .git, dist, .env, .gitignore, deploy.ps1, node_modules | Remove-Item -Recurse -Force
+# 3. Clean the directory COMPLETELY (Except .git and the new build)
+# This removes .env, node_modules, and scripts from the public branch
+Write-Host "Step 3: Purging all files from $currentBranch branch..."
+Get-ChildItem -Exclude .git, dist | Remove-Item -Recurse -Force
 
 # 4. Move files from dist to root
 Write-Host "Step 4: Moving build files..."
@@ -34,13 +35,13 @@ Copy-Item -Path "dist\*" -Destination "." -Recurse -Force
 Remove-Item -Path "dist" -Recurse -Force
 
 # 5. Commit and Push
-Write-Host "Step 5: Pushing to GitHub..."
+Write-Host "Step 5: Pushing CLEAN build to GitHub..."
 git add .
-git commit -m "Automated deploy: $(Get-Date)"
+git commit -m "Secure automated deploy: $(Get-Date)"
 git push origin gh-pages --force
 
 # 6. Return to main
 Write-Host "Step 6: Returning to main branch..."
 git checkout main
 
-Write-Host "Done! Site updated."
+Write-Host "Done! Site updated and secrets removed from public branch."
