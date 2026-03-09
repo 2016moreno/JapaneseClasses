@@ -1,0 +1,16 @@
+export const vocabulary = [
+    { id: 1, romaji: "Konnichiwa", japanese: "こんにちは", english: "Hello", type: "greeting" },
+    { id: 2, romaji: "Watashi", japanese: "私 (わたし)", english: "I / Me", type: "noun" },
+    { id: 3, romaji: "Wa", japanese: "は", english: "(Topic Marker)", type: "particle" },
+    { id: 4, romaji: "Desu", japanese: "です", english: "is / am / are", type: "verb" },
+    { id: 5, romaji: "Genki", japanese: "元気 (げんき)", english: "Energetic / Healthy", type: "adjective" },
+    { id: 6, romaji: "Ka", japanese: "か", english: "? (Question)", type: "particle" },
+    { id: 7, romaji: "Arigatou", japanese: "ありがとう", english: "Thank you", type: "greeting" },
+    { id: 8, romaji: "Sensei", japanese: "先生 (せんせい)", english: "Teacher", type: "noun" },
+    { id: 9, romaji: "Gakusei", japanese: "学生 (がくせい)", english: "Student", type: "noun" },
+    { id: 10, romaji: "Hai", japanese: "はい", english: "Yes", type: "response" },
+    { id: 11, romaji: "Iie", japanese: "いいえ", english: "No", type: "response" },
+    { id: 12, romaji: "Shigoto", japanese: "仕事 (しごと)", english: "Work", type: "noun" },
+    { id: 13, romaji: "Neko", japanese: "猫 (ねこ)", english: "Cat", type: "noun" },
+    { id: 14, romaji: "Inu", japanese: "犬 (いぬ)", english: "Dog", type: "noun" },
+];

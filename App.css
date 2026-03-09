@@ -1,0 +1,190 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+.app-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Header & Tabs */
+header h1 { margin-bottom: 20px; color: #2c3e50; }
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  border: none;
+  background: #e0e0e0;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.tabs button.active {
+  background: #3498db;
+  color: white;
+}
+
+.quiz-stats {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Quiz Styles */
+.flashcard {
+  background: white;
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.audio-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.romaji-text {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #2c3e50;
+}
+
+.japanese-text {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-top: 5px;
+}
+
+.quiz-instruction {
+  color: #7f8c8d;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.option-btn {
+  padding: 15px;
+  border: 2px solid #3498db;
+  background: white;
+  color: #3498db;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.option-btn:hover:not(:disabled) {
+  background: #3498db;
+  color: white;
+}
+
+.option-btn.correct {
+  background: #27ae60;
+  color: white;
+  border-color: #27ae60;
+}
+
+.option-btn.dim {
+  opacity: 0.5;
+}
+
+.feedback-area {
+  margin-top: 20px;
+}
+
+.feedback.correct { color: #27ae60; font-weight: bold; }
+.feedback.incorrect { color: #e74c3c; font-weight: bold; }
+
+.next-btn {
+  background: #2c3e50;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Sentence Builder Styles */
+.sentence-display {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 100px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.sentence-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  min-height: 50px;
+  align-items: center;
+  border-bottom: 2px dashed #eee;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+}
+
+.sentence-word {
+  background: #ecf0f1;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+
+.s-romaji { font-weight: bold; }
+.s-jp { font-size: 0.8rem; color: #777; }
+
+.bank-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.bank-item {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.bank-item:hover {
+  background: #f0f8ff;
+  border-color: #3498db;
+}
